@@ -18,15 +18,18 @@ class LoginSignupViewController: UIViewController {
     @IBOutlet weak var emailTextField: FloatLabelTextField!
     @IBOutlet weak var passwordTextField: FloatLabelTextField!
     @IBOutlet weak var refcodeTextField: FloatLabelTextField!
+    @IBOutlet weak var mainScrollView: UIScrollView!
+    @IBOutlet weak var contentView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        mainScrollView.contentSize = contentView.frame.size
         // Do any additional setup after loading the view.
     }
     
     override func viewDidLayoutSubviews() {
-        (loginView.superview?.superview as! UIScrollView).contentSize = (loginView.superview?.frame.size)!
+        mainScrollView.contentSize = contentView.frame.size
     }
 
     @IBAction func onClickClose(_ sender: UIButton) {
@@ -44,15 +47,19 @@ class LoginSignupViewController: UIViewController {
     }
     
     @IBAction func onClickFB(_ sender: UIButton) {
+        
     }
     
     @IBAction func onClickGooglePlus(_ sender: UIButton) {
+        
     }
     
     @IBAction func onClickForgotPassword(_ sender: UIButton) {
+        
     }
     
     @IBAction func onClickOTPLogin(_ sender: UIButton) {
+        
     }
     
     @IBAction func onClickLoginButton(_ sender: UIButton) {

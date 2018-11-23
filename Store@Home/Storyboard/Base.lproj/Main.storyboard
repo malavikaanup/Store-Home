@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dBi-jg-JIU">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -32,7 +32,7 @@
                                 </connections>
                             </button>
                             <segmentedControl opaque="NO" alpha="0.94999999999999996" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="EgO-fs-kl4">
-                                <rect key="frame" x="71" y="80" width="244" height="29"/>
+                                <rect key="frame" x="71" y="83" width="244" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="Mg6-7M-5lw"/>
                                 </constraints>
@@ -46,7 +46,7 @@
                                 </connections>
                             </segmentedControl>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dDh-Nw-BhB" customClass="TPKeyboardAvoidingScrollView">
-                                <rect key="frame" x="0.0" y="134" width="375" height="530"/>
+                                <rect key="frame" x="0.0" y="137" width="375" height="530"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cjo-yW-WNK">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="530"/>
@@ -61,7 +61,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MvW-rB-6B1">
-                                                <rect key="frame" x="122" y="20" width="38.5" height="45"/>
+                                                <rect key="frame" x="111" y="20" width="50" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="iDO-pX-Di2"/>
                                                 </constraints>
@@ -71,7 +71,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zd4-XB-N1K">
-                                                <rect key="frame" x="214.5" y="20" width="38.5" height="45"/>
+                                                <rect key="frame" x="218.5" y="20" width="50" height="45"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="45" id="Fql-bI-475"/>
                                                 </constraints>
@@ -424,22 +424,22 @@
                                             <constraint firstItem="9wW-RL-0wN" firstAttribute="top" secondItem="DNJ-7w-zj2" secondAttribute="bottom" constant="70" id="3ko-wa-euu"/>
                                             <constraint firstItem="zd4-XB-N1K" firstAttribute="top" secondItem="Cjo-yW-WNK" secondAttribute="top" constant="20" id="5cc-Gl-okr"/>
                                             <constraint firstItem="5wK-pP-51N" firstAttribute="leading" secondItem="Cjo-yW-WNK" secondAttribute="leading" id="7RM-BO-BaP"/>
-                                            <constraint firstItem="zd4-XB-N1K" firstAttribute="leading" secondItem="MvW-rB-6B1" secondAttribute="trailing" constant="54" id="TFq-Qx-fvN"/>
+                                            <constraint firstItem="zd4-XB-N1K" firstAttribute="leading" secondItem="MvW-rB-6B1" secondAttribute="trailing" constant="57" id="TFq-Qx-fvN"/>
                                             <constraint firstItem="MvW-rB-6B1" firstAttribute="width" secondItem="zd4-XB-N1K" secondAttribute="width" id="VBk-li-RqD"/>
                                             <constraint firstAttribute="trailing" secondItem="5wK-pP-51N" secondAttribute="trailing" id="VP4-LL-fHV"/>
-                                            <constraint firstItem="MvW-rB-6B1" firstAttribute="leading" secondItem="Cjo-yW-WNK" secondAttribute="leading" constant="122" id="Vsa-cE-Qzf"/>
+                                            <constraint firstItem="MvW-rB-6B1" firstAttribute="leading" secondItem="Cjo-yW-WNK" secondAttribute="leading" constant="111" id="Vsa-cE-Qzf"/>
                                             <constraint firstItem="DNJ-7w-zj2" firstAttribute="leading" secondItem="Cjo-yW-WNK" secondAttribute="leading" constant="20" id="bhm-fB-39I"/>
-                                            <constraint firstAttribute="trailing" secondItem="zd4-XB-N1K" secondAttribute="trailing" constant="122" id="cZg-K5-ovZ"/>
+                                            <constraint firstAttribute="trailing" secondItem="zd4-XB-N1K" secondAttribute="trailing" constant="106" id="cZg-K5-ovZ"/>
                                             <constraint firstItem="9wW-RL-0wN" firstAttribute="leading" secondItem="Cjo-yW-WNK" secondAttribute="leading" id="fgu-FV-k51"/>
                                             <constraint firstAttribute="trailing" secondItem="DNJ-7w-zj2" secondAttribute="trailing" constant="20" id="hqD-OX-SEf"/>
                                             <constraint firstAttribute="trailing" secondItem="9wW-RL-0wN" secondAttribute="trailing" id="kBq-sa-P8Q"/>
+                                            <constraint firstAttribute="height" constant="530" id="qUH-de-cSA"/>
                                             <constraint firstItem="MvW-rB-6B1" firstAttribute="top" secondItem="Cjo-yW-WNK" secondAttribute="top" constant="20" id="reZ-mJ-vpD"/>
                                             <constraint firstItem="5wK-pP-51N" firstAttribute="top" secondItem="DNJ-7w-zj2" secondAttribute="bottom" constant="34" id="zoX-Zw-U3b"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="Cjo-yW-WNK" firstAttribute="centerY" secondItem="dDh-Nw-BhB" secondAttribute="centerY" id="Lcx-T7-keo"/>
                                     <constraint firstItem="Cjo-yW-WNK" firstAttribute="leading" secondItem="dDh-Nw-BhB" secondAttribute="leading" id="O1b-OJ-mym"/>
                                     <constraint firstAttribute="bottom" secondItem="Cjo-yW-WNK" secondAttribute="bottom" id="aji-0i-IpF"/>
                                     <constraint firstItem="Cjo-yW-WNK" firstAttribute="top" secondItem="dDh-Nw-BhB" secondAttribute="top" id="e3S-S3-jwn"/>
@@ -453,22 +453,24 @@
                             <constraint firstItem="dDh-Nw-BhB" firstAttribute="leading" secondItem="2zb-eO-eKC" secondAttribute="leading" id="FBm-74-ZVj"/>
                             <constraint firstItem="dDh-Nw-BhB" firstAttribute="top" secondItem="EgO-fs-kl4" secondAttribute="bottom" constant="26" id="GIP-Xx-H6e"/>
                             <constraint firstItem="EgO-fs-kl4" firstAttribute="leading" secondItem="tit-vC-zgQ" secondAttribute="trailing" constant="20" id="KXO-Dw-8Ec"/>
+                            <constraint firstItem="EgO-fs-kl4" firstAttribute="top" secondItem="2zb-eO-eKC" secondAttribute="top" constant="63" id="NvY-p4-9A7"/>
                             <constraint firstItem="2zb-eO-eKC" firstAttribute="trailing" secondItem="EgO-fs-kl4" secondAttribute="trailing" constant="60" id="RGS-hM-KfO"/>
                             <constraint firstItem="Cjo-yW-WNK" firstAttribute="width" secondItem="XXI-gN-eYd" secondAttribute="width" id="aBb-ry-xwn"/>
                             <constraint firstItem="dDh-Nw-BhB" firstAttribute="trailing" secondItem="2zb-eO-eKC" secondAttribute="trailing" id="jt9-cU-lll"/>
                             <constraint firstItem="tit-vC-zgQ" firstAttribute="top" secondItem="2zb-eO-eKC" secondAttribute="top" constant="60" id="lIO-x7-222"/>
-                            <constraint firstItem="EgO-fs-kl4" firstAttribute="top" secondItem="tit-vC-zgQ" secondAttribute="top" id="sSa-Ik-0xi"/>
-                            <constraint firstItem="2zb-eO-eKC" firstAttribute="bottom" secondItem="dDh-Nw-BhB" secondAttribute="bottom" constant="3" id="xUr-op-vqr"/>
+                            <constraint firstItem="2zb-eO-eKC" firstAttribute="bottom" secondItem="dDh-Nw-BhB" secondAttribute="bottom" id="xUr-op-vqr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2zb-eO-eKC"/>
                     </view>
                     <connections>
+                        <outlet property="contentView" destination="Cjo-yW-WNK" id="DzB-Ey-Zwg"/>
                         <outlet property="emailTextField" destination="EVb-6e-Lsz" id="jqf-Jn-ewN"/>
                         <outlet property="firstNameTextField" destination="BXn-zU-70M" id="0a7-ve-QDZ"/>
                         <outlet property="lastNameTextField" destination="3zQ-jb-QmP" id="KU3-E3-jee"/>
                         <outlet property="loginEmailTextField" destination="wMm-GQ-LnA" id="Gzx-yX-dw6"/>
                         <outlet property="loginPasswordTextField" destination="Zq6-e6-ACT" id="vM4-rB-09o"/>
                         <outlet property="loginView" destination="9wW-RL-0wN" id="oG8-ar-5wg"/>
+                        <outlet property="mainScrollView" destination="dDh-Nw-BhB" id="5F8-c5-pm0"/>
                         <outlet property="passwordTextField" destination="63V-D9-zfw" id="8qd-7u-4fl"/>
                         <outlet property="refcodeTextField" destination="f8r-nH-A99" id="XZx-PJ-Pex"/>
                         <outlet property="signupView" destination="5wK-pP-51N" id="O9g-bQ-myU"/>
