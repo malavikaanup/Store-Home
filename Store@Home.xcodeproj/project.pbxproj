@@ -26,6 +26,11 @@
 		E36C9D2621A6BB37002013AF /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = E36C9D2021A6BB37002013AF /* TPKeyboardAvoidingTableView.m */; };
 		E36C9D2721A6BB37002013AF /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = E36C9D2121A6BB37002013AF /* TPKeyboardAvoidingScrollView.m */; };
 		E36C9D2821A6BB37002013AF /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = E36C9D2321A6BB37002013AF /* TPKeyboardAvoidingCollectionView.m */; };
+		E36C9D2C21A7B564002013AF /* Store_Home.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E36C9D2A21A7B564002013AF /* Store_Home.xcdatamodeld */; };
+		E36C9D3421A7B5FD002013AF /* LoginSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36C9D3321A7B5FD002013AF /* LoginSignupViewController.swift */; };
+		E36C9D3621A7B617002013AF /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36C9D3521A7B617002013AF /* CustomView.swift */; };
+		E36C9D3921A7B637002013AF /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36C9D3721A7B637002013AF /* HomeTableViewCell.swift */; };
+		E36C9D3A21A7B637002013AF /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E36C9D3821A7B637002013AF /* HomeTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +86,11 @@
 		E36C9D2221A6BB37002013AF /* UIScrollView+TPKeyboardAvoidingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TPKeyboardAvoidingAdditions.h"; sourceTree = "<group>"; };
 		E36C9D2321A6BB37002013AF /* TPKeyboardAvoidingCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingCollectionView.m; sourceTree = "<group>"; };
 		E36C9D2421A6BB37002013AF /* TPKeyboardAvoidingTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingTableView.h; sourceTree = "<group>"; };
+		E36C9D2B21A7B564002013AF /* Store_Home.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Store_Home.xcdatamodel; sourceTree = "<group>"; };
+		E36C9D3321A7B5FD002013AF /* LoginSignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignupViewController.swift; sourceTree = "<group>"; };
+		E36C9D3521A7B617002013AF /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
+		E36C9D3721A7B637002013AF /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		E36C9D3821A7B637002013AF /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,13 +169,13 @@
 		E36C9CD521A6A978002013AF /* Store@Home */ = {
 			isa = PBXGroup;
 			children = (
-				E36C9D1321A6AE0F002013AF /* Font */,
+				E36C9D3221A7B598002013AF /* Font */,
+				E36C9D2E21A7B588002013AF /* UI */,
+				E36C9D2D21A7B57A002013AF /* DataModel */,
+				E36C9D2921A7B564002013AF /* DataStructure */,
 				E36C9D1221A6AE07002013AF /* Globals */,
-				E36C9D1121A6ADF9002013AF /* Libs */,
 				E36C9D1021A6ADE7002013AF /* DataStructure */,
-				E36C9D0F21A6ADDF002013AF /* DataModel */,
 				E36C9D0D21A6AD74002013AF /* CustomClasses */,
-				E36C9D0921A6AD43002013AF /* UI */,
 				E36C9D0821A6AD1E002013AF /* Storyboard */,
 				E36C9D0721A6ACF4002013AF /* AppDelegate */,
 				E36C9CD821A6A978002013AF /* ViewController.swift */,
@@ -210,37 +220,6 @@
 			path = Storyboard;
 			sourceTree = "<group>";
 		};
-		E36C9D0921A6AD43002013AF /* UI */ = {
-			isa = PBXGroup;
-			children = (
-				E36C9D0C21A6AD5F002013AF /* CustomCells */,
-				E36C9D0A21A6AD5E002013AF /* CustomViews */,
-				E36C9D0B21A6AD5F002013AF /* ViewControllers */,
-			);
-			path = UI;
-			sourceTree = "<group>";
-		};
-		E36C9D0A21A6AD5E002013AF /* CustomViews */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CustomViews;
-			sourceTree = "<group>";
-		};
-		E36C9D0B21A6AD5F002013AF /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		E36C9D0C21A6AD5F002013AF /* CustomCells */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CustomCells;
-			sourceTree = "<group>";
-		};
 		E36C9D0D21A6AD74002013AF /* CustomClasses */ = {
 			isa = PBXGroup;
 			children = (
@@ -259,26 +238,12 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		E36C9D0F21A6ADDF002013AF /* DataModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DataModel;
-			sourceTree = "<group>";
-		};
 		E36C9D1021A6ADE7002013AF /* DataStructure */ = {
 			isa = PBXGroup;
 			children = (
 				E36C9CDD21A6A978002013AF /* Store_Home.xcdatamodeld */,
 			);
 			path = DataStructure;
-			sourceTree = "<group>";
-		};
-		E36C9D1121A6ADF9002013AF /* Libs */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Libs;
 			sourceTree = "<group>";
 		};
 		E36C9D1221A6AE07002013AF /* Globals */ = {
@@ -288,13 +253,6 @@
 				E36C9D1621A6B173002013AF /* AppConstants.swift */,
 			);
 			path = Globals;
-			sourceTree = "<group>";
-		};
-		E36C9D1321A6AE0F002013AF /* Font */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Font;
 			sourceTree = "<group>";
 		};
 		E36C9D1C21A6BB37002013AF /* TPKeyboardAvoiding */ = {
@@ -310,6 +268,64 @@
 				E36C9D2421A6BB37002013AF /* TPKeyboardAvoidingTableView.h */,
 			);
 			path = TPKeyboardAvoiding;
+			sourceTree = "<group>";
+		};
+		E36C9D2921A7B564002013AF /* DataStructure */ = {
+			isa = PBXGroup;
+			children = (
+				E36C9D2A21A7B564002013AF /* Store_Home.xcdatamodeld */,
+			);
+			name = DataStructure;
+			path = "../../Store@Home/Store@Home/DataStructure";
+			sourceTree = "<group>";
+		};
+		E36C9D2D21A7B57A002013AF /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		E36C9D2E21A7B588002013AF /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				E36C9D2F21A7B588002013AF /* CustomCells */,
+				E36C9D3021A7B588002013AF /* ViewControllers */,
+				E36C9D3121A7B588002013AF /* CustomViews */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		E36C9D2F21A7B588002013AF /* CustomCells */ = {
+			isa = PBXGroup;
+			children = (
+				E36C9D3721A7B637002013AF /* HomeTableViewCell.swift */,
+				E36C9D3821A7B637002013AF /* HomeTableViewCell.xib */,
+			);
+			path = CustomCells;
+			sourceTree = "<group>";
+		};
+		E36C9D3021A7B588002013AF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				E36C9D3321A7B5FD002013AF /* LoginSignupViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		E36C9D3121A7B588002013AF /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				E36C9D3521A7B617002013AF /* CustomView.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		E36C9D3221A7B598002013AF /* Font */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -423,6 +439,7 @@
 			files = (
 				E36C9CE421A6A979002013AF /* LaunchScreen.storyboard in Resources */,
 				E36C9CE121A6A979002013AF /* Assets.xcassets in Resources */,
+				E36C9D3A21A7B637002013AF /* HomeTableViewCell.xib in Resources */,
 				E36C9CDC21A6A978002013AF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -558,11 +575,15 @@
 				E36C9D1521A6AEC6002013AF /* Globals.swift in Sources */,
 				E36C9D2721A6BB37002013AF /* TPKeyboardAvoidingScrollView.m in Sources */,
 				E36C9CD921A6A978002013AF /* ViewController.swift in Sources */,
+				E36C9D3621A7B617002013AF /* CustomView.swift in Sources */,
 				E36C9CD721A6A978002013AF /* AppDelegate.swift in Sources */,
 				E36C9D2821A6BB37002013AF /* TPKeyboardAvoidingCollectionView.m in Sources */,
+				E36C9D3921A7B637002013AF /* HomeTableViewCell.swift in Sources */,
 				E36C9D2621A6BB37002013AF /* TPKeyboardAvoidingTableView.m in Sources */,
+				E36C9D3421A7B5FD002013AF /* LoginSignupViewController.swift in Sources */,
 				E36C9D1B21A6BB28002013AF /* NetworkManager.swift in Sources */,
 				E36C9D1921A6BB02002013AF /* RequestManager.swift in Sources */,
+				E36C9D2C21A7B564002013AF /* Store_Home.xcdatamodeld in Sources */,
 				E36C9D2521A6BB37002013AF /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				E36C9CDF21A6A978002013AF /* Store_Home.xcdatamodeld in Sources */,
 				E36C9D1721A6B173002013AF /* AppConstants.swift in Sources */,
@@ -906,6 +927,16 @@
 				E36C9CDE21A6A978002013AF /* Store_Home.xcdatamodel */,
 			);
 			currentVersion = E36C9CDE21A6A978002013AF /* Store_Home.xcdatamodel */;
+			path = Store_Home.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		E36C9D2A21A7B564002013AF /* Store_Home.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				E36C9D2B21A7B564002013AF /* Store_Home.xcdatamodel */,
+			);
+			currentVersion = E36C9D2B21A7B564002013AF /* Store_Home.xcdatamodel */;
 			path = Store_Home.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
