@@ -13,7 +13,6 @@
 		E36C9CD721A6A978002013AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36C9CD621A6A978002013AF /* AppDelegate.swift */; };
 		E36C9CD921A6A978002013AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36C9CD821A6A978002013AF /* ViewController.swift */; };
 		E36C9CDC21A6A978002013AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E36C9CDA21A6A978002013AF /* Main.storyboard */; };
-		E36C9CDF21A6A978002013AF /* Store_Home.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E36C9CDD21A6A978002013AF /* Store_Home.xcdatamodeld */; };
 		E36C9CE121A6A979002013AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E36C9CE021A6A979002013AF /* Assets.xcassets */; };
 		E36C9CE421A6A979002013AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E36C9CE221A6A979002013AF /* LaunchScreen.storyboard */; };
 		E36C9CEF21A6A979002013AF /* Store_HomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36C9CEE21A6A979002013AF /* Store_HomeTests.swift */; };
@@ -26,11 +25,13 @@
 		E36C9D2621A6BB37002013AF /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = E36C9D2021A6BB37002013AF /* TPKeyboardAvoidingTableView.m */; };
 		E36C9D2721A6BB37002013AF /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = E36C9D2121A6BB37002013AF /* TPKeyboardAvoidingScrollView.m */; };
 		E36C9D2821A6BB37002013AF /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = E36C9D2321A6BB37002013AF /* TPKeyboardAvoidingCollectionView.m */; };
-		E36C9D2C21A7B564002013AF /* Store_Home.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E36C9D2A21A7B564002013AF /* Store_Home.xcdatamodeld */; };
 		E36C9D3421A7B5FD002013AF /* LoginSignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36C9D3321A7B5FD002013AF /* LoginSignupViewController.swift */; };
 		E36C9D3621A7B617002013AF /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36C9D3521A7B617002013AF /* CustomView.swift */; };
 		E36C9D3921A7B637002013AF /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36C9D3721A7B637002013AF /* HomeTableViewCell.swift */; };
 		E36C9D3A21A7B637002013AF /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E36C9D3821A7B637002013AF /* HomeTableViewCell.xib */; };
+		E36C9D3D21A7B85A002013AF /* Store_Home.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E36C9D3B21A7B85A002013AF /* Store_Home.xcdatamodeld */; };
+		E36C9D4121A7CD39002013AF /* FloatLabelTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36C9D3F21A7CD39002013AF /* FloatLabelTextView.swift */; };
+		E36C9D4221A7CD39002013AF /* FloatLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36C9D4021A7CD39002013AF /* FloatLabelTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,7 +65,6 @@
 		E36C9CD621A6A978002013AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E36C9CD821A6A978002013AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E36C9CDB21A6A978002013AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		E36C9CDE21A6A978002013AF /* Store_Home.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Store_Home.xcdatamodel; sourceTree = "<group>"; };
 		E36C9CE021A6A979002013AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E36C9CE321A6A979002013AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E36C9CE521A6A979002013AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -86,11 +86,13 @@
 		E36C9D2221A6BB37002013AF /* UIScrollView+TPKeyboardAvoidingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TPKeyboardAvoidingAdditions.h"; sourceTree = "<group>"; };
 		E36C9D2321A6BB37002013AF /* TPKeyboardAvoidingCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingCollectionView.m; sourceTree = "<group>"; };
 		E36C9D2421A6BB37002013AF /* TPKeyboardAvoidingTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingTableView.h; sourceTree = "<group>"; };
-		E36C9D2B21A7B564002013AF /* Store_Home.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Store_Home.xcdatamodel; sourceTree = "<group>"; };
 		E36C9D3321A7B5FD002013AF /* LoginSignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginSignupViewController.swift; sourceTree = "<group>"; };
 		E36C9D3521A7B617002013AF /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		E36C9D3721A7B637002013AF /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		E36C9D3821A7B637002013AF /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
+		E36C9D3C21A7B85A002013AF /* Store_Home.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Store_Home.xcdatamodel; sourceTree = "<group>"; };
+		E36C9D3F21A7CD39002013AF /* FloatLabelTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatLabelTextView.swift; sourceTree = "<group>"; };
+		E36C9D4021A7CD39002013AF /* FloatLabelTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatLabelTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,7 +176,6 @@
 				E36C9D2D21A7B57A002013AF /* DataModel */,
 				E36C9D2921A7B564002013AF /* DataStructure */,
 				E36C9D1221A6AE07002013AF /* Globals */,
-				E36C9D1021A6ADE7002013AF /* DataStructure */,
 				E36C9D0D21A6AD74002013AF /* CustomClasses */,
 				E36C9D0821A6AD1E002013AF /* Storyboard */,
 				E36C9D0721A6ACF4002013AF /* AppDelegate */,
@@ -223,6 +224,7 @@
 		E36C9D0D21A6AD74002013AF /* CustomClasses */ = {
 			isa = PBXGroup;
 			children = (
+				E36C9D3E21A7CD39002013AF /* FloatLabelFields */,
 				E36C9D1C21A6BB37002013AF /* TPKeyboardAvoiding */,
 				E36C9D0E21A6AD89002013AF /* Utils */,
 			);
@@ -236,14 +238,6 @@
 				E36C9D1A21A6BB28002013AF /* NetworkManager.swift */,
 			);
 			path = Utils;
-			sourceTree = "<group>";
-		};
-		E36C9D1021A6ADE7002013AF /* DataStructure */ = {
-			isa = PBXGroup;
-			children = (
-				E36C9CDD21A6A978002013AF /* Store_Home.xcdatamodeld */,
-			);
-			path = DataStructure;
 			sourceTree = "<group>";
 		};
 		E36C9D1221A6AE07002013AF /* Globals */ = {
@@ -273,7 +267,7 @@
 		E36C9D2921A7B564002013AF /* DataStructure */ = {
 			isa = PBXGroup;
 			children = (
-				E36C9D2A21A7B564002013AF /* Store_Home.xcdatamodeld */,
+				E36C9D3B21A7B85A002013AF /* Store_Home.xcdatamodeld */,
 			);
 			name = DataStructure;
 			path = "../../Store@Home/Store@Home/DataStructure";
@@ -326,6 +320,15 @@
 			children = (
 			);
 			path = Font;
+			sourceTree = "<group>";
+		};
+		E36C9D3E21A7CD39002013AF /* FloatLabelFields */ = {
+			isa = PBXGroup;
+			children = (
+				E36C9D3F21A7CD39002013AF /* FloatLabelTextView.swift */,
+				E36C9D4021A7CD39002013AF /* FloatLabelTextField.swift */,
+			);
+			path = FloatLabelFields;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -574,18 +577,19 @@
 			files = (
 				E36C9D1521A6AEC6002013AF /* Globals.swift in Sources */,
 				E36C9D2721A6BB37002013AF /* TPKeyboardAvoidingScrollView.m in Sources */,
+				E36C9D3D21A7B85A002013AF /* Store_Home.xcdatamodeld in Sources */,
+				E36C9D4221A7CD39002013AF /* FloatLabelTextField.swift in Sources */,
 				E36C9CD921A6A978002013AF /* ViewController.swift in Sources */,
 				E36C9D3621A7B617002013AF /* CustomView.swift in Sources */,
 				E36C9CD721A6A978002013AF /* AppDelegate.swift in Sources */,
+				E36C9D4121A7CD39002013AF /* FloatLabelTextView.swift in Sources */,
 				E36C9D2821A6BB37002013AF /* TPKeyboardAvoidingCollectionView.m in Sources */,
 				E36C9D3921A7B637002013AF /* HomeTableViewCell.swift in Sources */,
 				E36C9D2621A6BB37002013AF /* TPKeyboardAvoidingTableView.m in Sources */,
 				E36C9D3421A7B5FD002013AF /* LoginSignupViewController.swift in Sources */,
 				E36C9D1B21A6BB28002013AF /* NetworkManager.swift in Sources */,
 				E36C9D1921A6BB02002013AF /* RequestManager.swift in Sources */,
-				E36C9D2C21A7B564002013AF /* Store_Home.xcdatamodeld in Sources */,
 				E36C9D2521A6BB37002013AF /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
-				E36C9CDF21A6A978002013AF /* Store_Home.xcdatamodeld in Sources */,
 				E36C9D1721A6B173002013AF /* AppConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -921,23 +925,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		E36C9CDD21A6A978002013AF /* Store_Home.xcdatamodeld */ = {
+		E36C9D3B21A7B85A002013AF /* Store_Home.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				E36C9CDE21A6A978002013AF /* Store_Home.xcdatamodel */,
+				E36C9D3C21A7B85A002013AF /* Store_Home.xcdatamodel */,
 			);
-			currentVersion = E36C9CDE21A6A978002013AF /* Store_Home.xcdatamodel */;
-			path = Store_Home.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-		E36C9D2A21A7B564002013AF /* Store_Home.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				E36C9D2B21A7B564002013AF /* Store_Home.xcdatamodel */,
-			);
-			currentVersion = E36C9D2B21A7B564002013AF /* Store_Home.xcdatamodel */;
-			path = Store_Home.xcdatamodeld;
+			currentVersion = E36C9D3C21A7B85A002013AF /* Store_Home.xcdatamodel */;
+			name = Store_Home.xcdatamodeld;
+			path = "../../../Store-Home/Store@Home/DataStructure/Store_Home.xcdatamodeld";
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
