@@ -1,0 +1,6 @@
+framework module Pods_Store_HomeTests {
+  umbrella header "Pods-Store@HomeTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
