@@ -29,9 +29,9 @@
 		E36C9D3621A7B617002013AF /* CustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36C9D3521A7B617002013AF /* CustomView.swift */; };
 		E36C9D3921A7B637002013AF /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36C9D3721A7B637002013AF /* HomeTableViewCell.swift */; };
 		E36C9D3A21A7B637002013AF /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E36C9D3821A7B637002013AF /* HomeTableViewCell.xib */; };
-		E36C9D3D21A7B85A002013AF /* Store_Home.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E36C9D3B21A7B85A002013AF /* Store_Home.xcdatamodeld */; };
 		E36C9D4121A7CD39002013AF /* FloatLabelTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36C9D3F21A7CD39002013AF /* FloatLabelTextView.swift */; };
 		E36C9D4221A7CD39002013AF /* FloatLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36C9D4021A7CD39002013AF /* FloatLabelTextField.swift */; };
+		E36C9D4621A8FD4E002013AF /* Store_Home.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E36C9D4421A8FD4D002013AF /* Store_Home.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,9 +90,9 @@
 		E36C9D3521A7B617002013AF /* CustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomView.swift; sourceTree = "<group>"; };
 		E36C9D3721A7B637002013AF /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		E36C9D3821A7B637002013AF /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
-		E36C9D3C21A7B85A002013AF /* Store_Home.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Store_Home.xcdatamodel; sourceTree = "<group>"; };
 		E36C9D3F21A7CD39002013AF /* FloatLabelTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatLabelTextView.swift; sourceTree = "<group>"; };
 		E36C9D4021A7CD39002013AF /* FloatLabelTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatLabelTextField.swift; sourceTree = "<group>"; };
+		E36C9D4521A8FD4D002013AF /* Store_Home.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Store_Home.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,10 +171,10 @@
 		E36C9CD521A6A978002013AF /* Store@Home */ = {
 			isa = PBXGroup;
 			children = (
+				E36C9D4321A8FD4D002013AF /* DataStructure */,
 				E36C9D3221A7B598002013AF /* Font */,
 				E36C9D2E21A7B588002013AF /* UI */,
 				E36C9D2D21A7B57A002013AF /* DataModel */,
-				E36C9D2921A7B564002013AF /* DataStructure */,
 				E36C9D1221A6AE07002013AF /* Globals */,
 				E36C9D0D21A6AD74002013AF /* CustomClasses */,
 				E36C9D0821A6AD1E002013AF /* Storyboard */,
@@ -264,15 +264,6 @@
 			path = TPKeyboardAvoiding;
 			sourceTree = "<group>";
 		};
-		E36C9D2921A7B564002013AF /* DataStructure */ = {
-			isa = PBXGroup;
-			children = (
-				E36C9D3B21A7B85A002013AF /* Store_Home.xcdatamodeld */,
-			);
-			name = DataStructure;
-			path = "../../Store@Home/Store@Home/DataStructure";
-			sourceTree = "<group>";
-		};
 		E36C9D2D21A7B57A002013AF /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
@@ -329,6 +320,14 @@
 				E36C9D4021A7CD39002013AF /* FloatLabelTextField.swift */,
 			);
 			path = FloatLabelFields;
+			sourceTree = "<group>";
+		};
+		E36C9D4321A8FD4D002013AF /* DataStructure */ = {
+			isa = PBXGroup;
+			children = (
+				E36C9D4421A8FD4D002013AF /* Store_Home.xcdatamodeld */,
+			);
+			path = DataStructure;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -478,7 +477,6 @@
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
-				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
@@ -489,7 +487,6 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -576,8 +573,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E36C9D1521A6AEC6002013AF /* Globals.swift in Sources */,
+				E36C9D4621A8FD4E002013AF /* Store_Home.xcdatamodeld in Sources */,
 				E36C9D2721A6BB37002013AF /* TPKeyboardAvoidingScrollView.m in Sources */,
-				E36C9D3D21A7B85A002013AF /* Store_Home.xcdatamodeld in Sources */,
 				E36C9D4221A7CD39002013AF /* FloatLabelTextField.swift in Sources */,
 				E36C9CD921A6A978002013AF /* ViewController.swift in Sources */,
 				E36C9D3621A7B617002013AF /* CustomView.swift in Sources */,
@@ -925,14 +922,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		E36C9D3B21A7B85A002013AF /* Store_Home.xcdatamodeld */ = {
+		E36C9D4421A8FD4D002013AF /* Store_Home.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				E36C9D3C21A7B85A002013AF /* Store_Home.xcdatamodel */,
+				E36C9D4521A8FD4D002013AF /* Store_Home.xcdatamodel */,
 			);
-			currentVersion = E36C9D3C21A7B85A002013AF /* Store_Home.xcdatamodel */;
-			name = Store_Home.xcdatamodeld;
-			path = "../../../Store-Home/Store@Home/DataStructure/Store_Home.xcdatamodeld";
+			currentVersion = E36C9D4521A8FD4D002013AF /* Store_Home.xcdatamodel */;
+			path = Store_Home.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

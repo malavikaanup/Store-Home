@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import FBSDKLoginKit
+import GoogleSignIn
 
-class LoginSignupViewController: UIViewController {
+
+class LoginSignupViewController: UIViewController, GIDSignInUIDelegate {
     @IBOutlet weak var loginView: UIView!
     @IBOutlet weak var signupView: UIView!
     @IBOutlet weak var loginEmailTextField: FloatLabelTextField!
@@ -21,10 +24,17 @@ class LoginSignupViewController: UIViewController {
     @IBOutlet weak var mainScrollView: UIScrollView!
     @IBOutlet weak var contentView: UIView!
     
+    var dict: [String: AnyObject]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         mainScrollView.contentSize = contentView.frame.size
+        
+        GIDSignIn.sharedInstance().uiDelegate = self
+        
+        NotificationCenter.default.addObserver(self, selector: Selector(onSuccessSignIn(_:)), name: NSNotification.Name(rawValue: "GoogleSignIn"), object: nil)
+        
         // Do any additional setup after loading the view.
     }
     
@@ -47,11 +57,39 @@ class LoginSignupViewController: UIViewController {
     }
     
     @IBAction func onClickFB(_ sender: UIButton) {
-        
+        FBSDKLoginManager().logIn(withReadPermissions: ["public_profile", "email"], from: self) { (loginResult, error) in
+            
+            if let err = error {
+                print(err)
+            } else if (loginResult?.isCancelled)! {
+                print("Login cancelled")
+            } else {
+                print(loginResult?.grantedPermissions as Any)
+                print(loginResult?.declinedPermissions as Any)
+                self.getFbUserData()
+            }
+        }
+    }
+    
+    func getFbUserData() {
+        if FBSDKAccessToken.current() != nil {
+            FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, email, picture.type(large)"]).start { (connection, result, error) -> Void in
+                if error == nil {
+                    self.dict = result as! [String: AnyObject]
+                    print(result as Any)
+                    self.dismiss(animated: true, completion: nil)
+                }
+            }
+        }
     }
     
     @IBAction func onClickGooglePlus(_ sender: UIButton) {
-        
+        GIDSignIn.sharedInstance().signIn()
+    }
+    
+    func onSuccessSignIn(notification: Notification) {
+        print(notification.userInfo)
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func onClickForgotPassword(_ sender: UIButton) {

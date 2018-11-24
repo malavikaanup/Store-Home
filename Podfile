@@ -6,7 +6,6 @@ target 'Store@Home' do
   use_frameworks!
 
   # Pods for Store@Home
-   pod 'ReachabilitySwift'
    pod 'Alamofire'	
    pod 'FBSDKLoginKit'
    pod 'GoogleSignIn'

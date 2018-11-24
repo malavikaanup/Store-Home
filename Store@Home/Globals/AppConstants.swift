@@ -21,6 +21,8 @@ let appdelegate = UIApplication.shared.delegate as! AppDelegate
 
 let alertTitle = "Store@Home"
 
+let GPLUS_CLIENTID = "64679762157-os1qq4ehn7hgstgap6hctdtvc4br74kd.apps.googleusercontent.com"
+
 struct AppColor {
     
 }
