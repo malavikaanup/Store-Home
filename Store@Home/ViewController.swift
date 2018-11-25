@@ -18,8 +18,8 @@ class ViewController: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         if firstTime {
-            let loginVC = storyboard?.instantiateViewController(withIdentifier: "LoginSignupVC") as! LoginSignupViewController
-            present(loginVC, animated: true) {
+            let loginNavVC = storyboard?.instantiateViewController(withIdentifier: "LoginSignupNavVC") as! UINavigationController
+            present(loginNavVC, animated: true) {
                 self.firstTime = false
             }
         }

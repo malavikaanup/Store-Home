@@ -33,9 +33,14 @@ class LoginSignupViewController: UIViewController, GIDSignInUIDelegate {
         
         GIDSignIn.sharedInstance().uiDelegate = self
         
-        NotificationCenter.default.addObserver(self, selector: Selector(onSuccessSignIn(_:)), name: NSNotification.Name(rawValue: "GoogleSignIn"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(onSuccessSignIn(_:)), name: NSNotification.Name(rawValue: "GoogleSignIn"), object: nil)
         
         // Do any additional setup after loading the view.
+    }
+    
+    @objc func onSuccessSignIn(_ notification: Notification) -> Void {
+        print(notification.userInfo as Any)
+        self.dismiss(animated: true, completion: nil)
     }
     
     override func viewDidLayoutSubviews() {
@@ -87,17 +92,21 @@ class LoginSignupViewController: UIViewController, GIDSignInUIDelegate {
         GIDSignIn.sharedInstance().signIn()
     }
     
-    func onSuccessSignIn(notification: Notification) {
-        print(notification.userInfo)
-        self.dismiss(animated: true, completion: nil)
-    }
-    
     @IBAction func onClickForgotPassword(_ sender: UIButton) {
+        if loginEmailTextField.text?.count == 0 {
+            Globals.showAlertWithText(message: "Please enter email id. \n We will send an OTP to the resgistered mobile number and email id", viewController: self)
+        } else {
+            self.performSegue(withIdentifier: "pushSegueToOTP", sender: sender)
+        }
         
     }
     
     @IBAction func onClickOTPLogin(_ sender: UIButton) {
-        
+        if loginEmailTextField.text?.count == 0 {
+            Globals.showAlertWithText(message: "Please enter email id. \n We will send an OTP to the resgistered mobile number and email id", viewController: self)
+        } else {
+            self.performSegue(withIdentifier: "pushSegueToOTP", sender: sender)
+        }
     }
     
     @IBAction func onClickLoginButton(_ sender: UIButton) {
@@ -109,6 +118,7 @@ class LoginSignupViewController: UIViewController, GIDSignInUIDelegate {
     }
     
     @IBAction func onClickInfoButton(_ sender: UIButton) {
+        Globals.showAlertWithText(message: "Accept your friend's invite by entering referral code and earn free credits", viewController: self)
     }
     
     @IBAction func onClickSignupButton(_ sender: UIButton) {
@@ -122,14 +132,16 @@ class LoginSignupViewController: UIViewController, GIDSignInUIDelegate {
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        let otpLoginVC = segue.destination as! ForgotPasswordOTPLoginViewController
+        otpLoginVC.otpViewTag = (sender as! UIButton).tag == 11 ? ViewTags.forgotPassword : ViewTags.otpLogin
     }
-    */
+ 
 
 }

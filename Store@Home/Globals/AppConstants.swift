@@ -24,7 +24,13 @@ let alertTitle = "Store@Home"
 let GPLUS_CLIENTID = "64679762157-os1qq4ehn7hgstgap6hctdtvc4br74kd.apps.googleusercontent.com"
 
 struct AppColor {
-    
+    static let grayBorderColor = UIColor(red: 109.0/255.0, green: 109.0/255.0, blue: 109.0/255.0, alpha: 1.0)
+    static let orangeColor = UIColor(red: 1.0, green: 118.0/255.0, blue: 59.0/255.0, alpha: 1.0)
+}
+
+struct ViewTags {
+    static let otpLogin = 1
+    static let forgotPassword = 2
 }
 
 struct Message {
