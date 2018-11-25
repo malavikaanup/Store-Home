@@ -10,6 +10,7 @@
 		085F54D0DDEF33F62635E1BC /* Pods_Store_HomeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B8951099A5C412A4F106A2 /* Pods_Store_HomeTests.framework */; };
 		1C199C09EA8BAC6949AE3750 /* Pods_Store_HomeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B8B59F1CAA516AD55FDA423 /* Pods_Store_HomeUITests.framework */; };
 		1C341C24112F3D1F608021CD /* Pods_Store_Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70F56ACA27827484BD95216B /* Pods_Store_Home.framework */; };
+		E323298E21AA70B800925B10 /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E323298D21AA70B700925B10 /* SWRevealViewController.m */; };
 		E323CE7121A99AAD00743873 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E323CE7021A99AAD00743873 /* Main.storyboard */; };
 		E36C9CD721A6A978002013AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36C9CD621A6A978002013AF /* AppDelegate.swift */; };
 		E36C9CD921A6A978002013AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36C9CD821A6A978002013AF /* ViewController.swift */; };
@@ -62,6 +63,8 @@
 		85B8951099A5C412A4F106A2 /* Pods_Store_HomeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Store_HomeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93DD87261E956FD319B1F0F2 /* Pods-Store@HomeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Store@HomeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Store@HomeUITests/Pods-Store@HomeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D6EFF9C5BFE6AD55C4025590 /* Pods-Store@HomeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Store@HomeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Store@HomeTests/Pods-Store@HomeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E323298C21AA70B700925B10 /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		E323298D21AA70B700925B10 /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		E323CE7021A99AAD00743873 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		E36C9CD321A6A978002013AF /* Store@Home.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Store@Home.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E36C9CD621A6A978002013AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -148,6 +151,15 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E323298B21AA70B700925B10 /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				E323298C21AA70B700925B10 /* SWRevealViewController.h */,
+				E323298D21AA70B700925B10 /* SWRevealViewController.m */,
+			);
+			path = SWRevealViewController;
+			sourceTree = "<group>";
+		};
 		E36C9CCA21A6A978002013AF = {
 			isa = PBXGroup;
 			children = (
@@ -226,6 +238,7 @@
 		E36C9D0D21A6AD74002013AF /* CustomClasses */ = {
 			isa = PBXGroup;
 			children = (
+				E323298B21AA70B700925B10 /* SWRevealViewController */,
 				E36C9D3E21A7CD39002013AF /* FloatLabelFields */,
 				E36C9D1C21A6BB37002013AF /* TPKeyboardAvoiding */,
 				E36C9D0E21A6AD89002013AF /* Utils */,
@@ -582,6 +595,7 @@
 				E36C9D2721A6BB37002013AF /* TPKeyboardAvoidingScrollView.m in Sources */,
 				E36C9D4221A7CD39002013AF /* FloatLabelTextField.swift in Sources */,
 				E36C9CD921A6A978002013AF /* ViewController.swift in Sources */,
+				E323298E21AA70B800925B10 /* SWRevealViewController.m in Sources */,
 				E36C9D3621A7B617002013AF /* CustomView.swift in Sources */,
 				E36C9CD721A6A978002013AF /* AppDelegate.swift in Sources */,
 				E36C9D4921A92B21002013AF /* ForgotPasswordOTPLoginViewController.swift in Sources */,
