@@ -10,9 +10,9 @@
 		085F54D0DDEF33F62635E1BC /* Pods_Store_HomeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85B8951099A5C412A4F106A2 /* Pods_Store_HomeTests.framework */; };
 		1C199C09EA8BAC6949AE3750 /* Pods_Store_HomeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B8B59F1CAA516AD55FDA423 /* Pods_Store_HomeUITests.framework */; };
 		1C341C24112F3D1F608021CD /* Pods_Store_Home.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70F56ACA27827484BD95216B /* Pods_Store_Home.framework */; };
+		E323CE7121A99AAD00743873 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E323CE7021A99AAD00743873 /* Main.storyboard */; };
 		E36C9CD721A6A978002013AF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36C9CD621A6A978002013AF /* AppDelegate.swift */; };
 		E36C9CD921A6A978002013AF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36C9CD821A6A978002013AF /* ViewController.swift */; };
-		E36C9CDC21A6A978002013AF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E36C9CDA21A6A978002013AF /* Main.storyboard */; };
 		E36C9CE121A6A979002013AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E36C9CE021A6A979002013AF /* Assets.xcassets */; };
 		E36C9CE421A6A979002013AF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E36C9CE221A6A979002013AF /* LaunchScreen.storyboard */; };
 		E36C9CEF21A6A979002013AF /* Store_HomeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36C9CEE21A6A979002013AF /* Store_HomeTests.swift */; };
@@ -32,6 +32,7 @@
 		E36C9D4121A7CD39002013AF /* FloatLabelTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36C9D3F21A7CD39002013AF /* FloatLabelTextView.swift */; };
 		E36C9D4221A7CD39002013AF /* FloatLabelTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36C9D4021A7CD39002013AF /* FloatLabelTextField.swift */; };
 		E36C9D4621A8FD4E002013AF /* Store_Home.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E36C9D4421A8FD4D002013AF /* Store_Home.xcdatamodeld */; };
+		E36C9D4921A92B21002013AF /* ForgotPasswordOTPLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E36C9D4821A92B21002013AF /* ForgotPasswordOTPLoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,10 +62,10 @@
 		85B8951099A5C412A4F106A2 /* Pods_Store_HomeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Store_HomeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93DD87261E956FD319B1F0F2 /* Pods-Store@HomeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Store@HomeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Store@HomeUITests/Pods-Store@HomeUITests.release.xcconfig"; sourceTree = "<group>"; };
 		D6EFF9C5BFE6AD55C4025590 /* Pods-Store@HomeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Store@HomeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Store@HomeTests/Pods-Store@HomeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		E323CE7021A99AAD00743873 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		E36C9CD321A6A978002013AF /* Store@Home.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Store@Home.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E36C9CD621A6A978002013AF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E36C9CD821A6A978002013AF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		E36C9CDB21A6A978002013AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E36C9CE021A6A979002013AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E36C9CE321A6A979002013AF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E36C9CE521A6A979002013AF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -93,6 +94,7 @@
 		E36C9D3F21A7CD39002013AF /* FloatLabelTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatLabelTextView.swift; sourceTree = "<group>"; };
 		E36C9D4021A7CD39002013AF /* FloatLabelTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatLabelTextField.swift; sourceTree = "<group>"; };
 		E36C9D4521A8FD4D002013AF /* Store_Home.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Store_Home.xcdatamodel; sourceTree = "<group>"; };
+		E36C9D4821A92B21002013AF /* ForgotPasswordOTPLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForgotPasswordOTPLoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -215,7 +217,7 @@
 		E36C9D0821A6AD1E002013AF /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
-				E36C9CDA21A6A978002013AF /* Main.storyboard */,
+				E323CE7021A99AAD00743873 /* Main.storyboard */,
 				E36C9CE221A6A979002013AF /* LaunchScreen.storyboard */,
 			);
 			path = Storyboard;
@@ -294,6 +296,7 @@
 			isa = PBXGroup;
 			children = (
 				E36C9D3321A7B5FD002013AF /* LoginSignupViewController.swift */,
+				E36C9D4821A92B21002013AF /* ForgotPasswordOTPLoginViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -440,9 +443,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E36C9CE421A6A979002013AF /* LaunchScreen.storyboard in Resources */,
+				E323CE7121A99AAD00743873 /* Main.storyboard in Resources */,
 				E36C9CE121A6A979002013AF /* Assets.xcassets in Resources */,
 				E36C9D3A21A7B637002013AF /* HomeTableViewCell.xib in Resources */,
-				E36C9CDC21A6A978002013AF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -581,6 +584,7 @@
 				E36C9CD921A6A978002013AF /* ViewController.swift in Sources */,
 				E36C9D3621A7B617002013AF /* CustomView.swift in Sources */,
 				E36C9CD721A6A978002013AF /* AppDelegate.swift in Sources */,
+				E36C9D4921A92B21002013AF /* ForgotPasswordOTPLoginViewController.swift in Sources */,
 				E36C9D4121A7CD39002013AF /* FloatLabelTextView.swift in Sources */,
 				E36C9D2821A6BB37002013AF /* TPKeyboardAvoidingCollectionView.m in Sources */,
 				E36C9D3921A7B637002013AF /* HomeTableViewCell.swift in Sources */,
@@ -625,14 +629,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		E36C9CDA21A6A978002013AF /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				E36C9CDB21A6A978002013AF /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		E36C9CE221A6A979002013AF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
