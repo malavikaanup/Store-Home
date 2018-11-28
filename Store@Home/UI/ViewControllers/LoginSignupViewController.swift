@@ -12,6 +12,7 @@ import GoogleSignIn
 
 
 class LoginSignupViewController: UIViewController, GIDSignInUIDelegate {
+    @IBOutlet weak var segmentControl: UISegmentedControl!
     @IBOutlet weak var loginView: UIView!
     @IBOutlet weak var signupView: UIView!
     @IBOutlet weak var loginEmailTextField: FloatLabelTextField!
@@ -25,6 +26,8 @@ class LoginSignupViewController: UIViewController, GIDSignInUIDelegate {
     @IBOutlet weak var contentView: UIView!
     
     var dict: [String: AnyObject]!
+    var selectedSegment: Int = 0
+    var fromSideMenu: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +38,10 @@ class LoginSignupViewController: UIViewController, GIDSignInUIDelegate {
         
         NotificationCenter.default.addObserver(self, selector: #selector(onSuccessSignIn(_:)), name: NSNotification.Name(rawValue: "GoogleSignIn"), object: nil)
         
+        if fromSideMenu {
+            segmentControl.selectedSegmentIndex = selectedSegment
+            self.changeSegmentValue(value: selectedSegment)
+        }
         // Do any additional setup after loading the view.
     }
     
@@ -52,7 +59,11 @@ class LoginSignupViewController: UIViewController, GIDSignInUIDelegate {
     }
     
     @IBAction func onChangeSegmentValue(_ sender: UISegmentedControl) {
-        if sender.selectedSegmentIndex == 0 {
+        self.changeSegmentValue(value: sender.selectedSegmentIndex)
+    }
+    
+    func changeSegmentValue(value: Int) {
+        if value == 0 {
             loginView.isHidden = false
             signupView.isHidden = true
         } else {

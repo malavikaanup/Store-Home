@@ -18,6 +18,7 @@ let DEMO = true
 let SERVER_URL = DEMO ? DEMO_SERVER_URL : LIVE_SERVER_URL
 
 let appdelegate = UIApplication.shared.delegate as! AppDelegate
+let screenWidth = UIScreen.main.bounds.size.width
 
 let alertTitle = "Store@Home"
 

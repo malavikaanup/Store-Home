@@ -32,15 +32,10 @@ class ForgotPasswordOTPLoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        Globals.changeButtonAppearance(button: resendButton, color: AppColor.grayBorderColor)
+        Globals.changeButtonAppearance(button: updateButton, color: AppColor.orangeColor)
 
-        resendButton.layer.cornerRadius = 3.0
-        resendButton.layer.borderWidth = 1.0
-        resendButton.layer.borderColor = AppColor.grayBorderColor.cgColor
-        
-        updateButton.layer.borderColor = AppColor.orangeColor.cgColor
-        updateButton.layer.borderWidth = 1.0
-        updateButton.layer.cornerRadius = 3.0
-        
         switch otpViewTag {
             case ViewTags.otpLogin:
                 loginButton.isHidden = false

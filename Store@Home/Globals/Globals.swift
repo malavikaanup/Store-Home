@@ -95,4 +95,11 @@ class Globals: NSObject {
     func trimmedText(string: String) -> String {
         return string.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines)
     }
+    
+    class func changeButtonAppearance (button: UIButton, color: UIColor) {
+        button.layer.cornerRadius = 3.0
+        button.layer.borderWidth = 1.0
+        button.layer.borderColor = color.cgColor
+    }
+    
 }
