@@ -13,7 +13,7 @@ class SideMenuTableViewCell: UITableViewCell {
     @IBOutlet weak var cellArrowTrailConstraint: NSLayoutConstraint!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var arrowImageView: UIImageView!
-    
+        
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

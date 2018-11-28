@@ -25,15 +25,13 @@ class SideMenuViewController: UIViewController, UITableViewDataSource, UITableVi
     @IBOutlet weak var loginButton: UIButton!
     
     var loggedIn = false
-    var canViewContents = false
-
+    var accountContents = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         Globals.changeButtonAppearance(button: loginButton, color: UIColor.white)
         Globals.changeButtonAppearance(button: signupButton, color: UIColor.white)
-        
-        
         
         let rearWidth = self.revealViewController().rearViewRevealWidth
         let trailConstant = screenWidth - rearWidth
@@ -43,7 +41,12 @@ class SideMenuViewController: UIViewController, UITableViewDataSource, UITableVi
         
         let nib = UINib(nibName: "MenuHeaderView", bundle: nil)
         menuTableView.register(nib, forHeaderFooterViewReuseIdentifier: "menuHeaderID")
+        
         // Do any additional setup after loading the view.
+    }
+    
+    func prepareContentsofAccount() {
+        accountContents = ["My Orders", "My Wallet", "Third-party Payment Wallets", "Pay Now for Orders", "My Profile", "Change Password", "Delivery Address", "Logout"]
     }
     
     override func didReceiveMemoryWarning() {
@@ -63,9 +66,32 @@ class SideMenuViewController: UIViewController, UITableViewDataSource, UITableVi
         guestMenuTableView.isHidden = loggedIn
     }
     
-    @objc func revealSectionContents(_ sender: UIButton) {
-        canViewContents = !canViewContents
-        menuTableView.reloadSections(IndexSet(integer: 1), with: UITableViewRowAnimation.none)
+    @objc func revealSectionContents(_ sender: Any) {
+        
+        var section = -1
+        var addButton = UIButton()
+        if sender is UIButton {
+            addButton = sender as! UIButton
+            
+        } else if sender is UITapGestureRecognizer {
+            let header = ((sender as! UITapGestureRecognizer).view) as! MenuHeaderView
+            addButton = header.addButton
+        }
+        
+        var indexPaths = [IndexPath]()
+        for row in 0...7 {
+            let indexPath = IndexPath(row: row, section: 1)
+            indexPaths.append(indexPath)
+        }
+        
+        if addButton.isSelected {
+            accountContents.removeAll()
+            menuTableView.deleteRows(at: indexPaths, with: UITableViewRowAnimation.none)
+        } else {
+            prepareContentsofAccount()
+            menuTableView.insertRows(at: indexPaths, with: UITableViewRowAnimation.none)
+        }
+        addButton.isSelected = !addButton.isSelected
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -79,7 +105,7 @@ class SideMenuViewController: UIViewController, UITableViewDataSource, UITableVi
         if tableView == menuTableView {
             switch section {
             case 1:
-                return canViewContents ? 8 : 0
+                return accountContents.count
             case 2:
                 return 10
             default:
@@ -99,6 +125,11 @@ class SideMenuViewController: UIViewController, UITableViewDataSource, UITableVi
             headerView.frame = CGRect(x: 0.0, y: 0.0, width: tableView.frame.size.width, height: 60.0)
             headerView.sectionLabel.text = "My Account"
             headerView.addButton.addTarget(self, action: #selector(revealSectionContents(_:)), for: UIControlEvents.touchUpInside)
+            let tapGest = UITapGestureRecognizer(target: self, action: #selector(revealSectionContents(_:)))
+            tapGest.numberOfTapsRequired = 1
+            headerView.addGestureRecognizer(tapGest)
+            headerView.section = section
+            headerView.addButton.isSelected = accountContents.count == 0 ? false : true
             let rearWidth = self.revealViewController().rearViewRevealWidth
             headerView.addButtonTrailConstraint.constant = (screenWidth - rearWidth) + 20.0
             return headerView
@@ -121,7 +152,7 @@ class SideMenuViewController: UIViewController, UITableViewDataSource, UITableVi
                 titleText = "Smart Basket"
             case 2:
                 titleText = "Shop by Category"
-                cell.titleLabel.font = UIFont(name: "HelveticaNeue-Medium", size: 15.0)
+                cell.titleLabel.font = UIFont(name: "HelveticaNeue-Medium", size: 17.0)
                 cell.arrowImageView.isHidden = false
             case 3:
                 titleText = "Offers"
@@ -147,25 +178,8 @@ class SideMenuViewController: UIViewController, UITableViewDataSource, UITableVi
                 cell.titleLabel.font                  = UIFont(name: "HelveticaNeue", size: 15.0)
                 cell.titleLabel.textColor             = AppColor.grayBorderColor
                 cell.cellLabelLeadConstraint.constant = 30.0
+                titleText = accountContents[indexPath.row]
                 
-                switch indexPath.row {
-                case 1:
-                    titleText = "My Wallet"
-                case 2:
-                    titleText = "Third-party Payment Wallets"
-                case 3:
-                    titleText = "Pay Now for Orders"
-                case 4:
-                    titleText = "My Profile"
-                case 5:
-                    titleText = "Change Password"
-                case 6:
-                    titleText = "Delivery Address"
-                case 7:
-                    titleText = "Logout"
-                default:
-                    titleText = "My Orders"
-                }
             case 2:
                 switch indexPath.row {
                 case 1:

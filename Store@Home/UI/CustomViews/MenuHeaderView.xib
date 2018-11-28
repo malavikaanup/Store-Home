@@ -16,41 +16,58 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OCE-ow-C0g">
-                    <rect key="frame" x="310" y="15" width="45" height="30"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CiZ-pG-ccY">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="60"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EAW-lj-zCy">
+                            <rect key="frame" x="20" y="15" width="283" height="30"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OCE-ow-C0g">
+                            <rect key="frame" x="323" y="14" width="32" height="32"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="32" id="1H5-Ad-wSg"/>
+                                <constraint firstAttribute="width" constant="32" id="shG-yr-zsG"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="35"/>
+                            <state key="normal" image="add_icon">
+                                <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <state key="selected" image="toggleadd_icon"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="1H5-Ad-wSg"/>
-                        <constraint firstAttribute="width" constant="45" id="shG-yr-zsG"/>
+                        <constraint firstItem="OCE-ow-C0g" firstAttribute="leading" secondItem="EAW-lj-zCy" secondAttribute="trailing" constant="20" id="MlS-aC-7Rx"/>
+                        <constraint firstItem="EAW-lj-zCy" firstAttribute="leading" secondItem="CiZ-pG-ccY" secondAttribute="leading" constant="20" id="RGu-Wy-68G"/>
+                        <constraint firstAttribute="bottom" secondItem="EAW-lj-zCy" secondAttribute="bottom" constant="15" id="Z95-Mn-ogE"/>
+                        <constraint firstItem="OCE-ow-C0g" firstAttribute="top" secondItem="CiZ-pG-ccY" secondAttribute="top" constant="14" id="bgY-yk-9Cj"/>
+                        <constraint firstAttribute="trailing" secondItem="OCE-ow-C0g" secondAttribute="trailing" constant="20" id="cPM-n7-XE6"/>
+                        <constraint firstItem="EAW-lj-zCy" firstAttribute="top" secondItem="CiZ-pG-ccY" secondAttribute="top" constant="15" id="cSR-kl-a4s"/>
                     </constraints>
-                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="35"/>
-                    <state key="normal" title="+">
-                        <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </state>
-                </button>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EAW-lj-zCy">
-                    <rect key="frame" x="20" y="15" width="270" height="30"/>
-                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
+                </view>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="OCE-ow-C0g" firstAttribute="leading" secondItem="EAW-lj-zCy" secondAttribute="trailing" constant="20" id="4Aa-2Z-Ac2"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="OCE-ow-C0g" secondAttribute="trailing" constant="20" id="JH4-r8-Qvd"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="EAW-lj-zCy" secondAttribute="bottom" constant="15" id="NnV-Nb-85X"/>
-                <constraint firstItem="OCE-ow-C0g" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="15" id="ibH-1d-T1v"/>
-                <constraint firstItem="EAW-lj-zCy" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="m2D-R5-xvo"/>
-                <constraint firstItem="EAW-lj-zCy" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" constant="15" id="wEo-0F-k9e"/>
+                <constraint firstItem="CiZ-pG-ccY" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="2nu-vl-Jh9"/>
+                <constraint firstItem="CiZ-pG-ccY" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="eCq-8D-AC4"/>
+                <constraint firstItem="CiZ-pG-ccY" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="lQL-j6-i3y"/>
+                <constraint firstItem="CiZ-pG-ccY" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="vBe-Ec-hqk"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="addButton" destination="OCE-ow-C0g" id="T60-ac-Qef"/>
-                <outlet property="addButtonTrailConstraint" destination="JH4-r8-Qvd" id="J3j-KL-kHp"/>
+                <outlet property="addButtonTrailConstraint" destination="cPM-n7-XE6" id="Hc2-NJ-OWr"/>
                 <outlet property="sectionLabel" destination="EAW-lj-zCy" id="iph-QN-LHJ"/>
             </connections>
             <point key="canvasLocation" x="33.5" y="164"/>
         </view>
     </objects>
+    <resources>
+        <image name="add_icon" width="32" height="32"/>
+        <image name="toggleadd_icon" width="32" height="32"/>
+    </resources>
 </document>

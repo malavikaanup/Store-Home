@@ -8,11 +8,14 @@
 
 import UIKit
 
-class MenuHeaderView: UIView {
+class MenuHeaderView: UITableViewHeaderFooterView {
 
     @IBOutlet weak var addButtonTrailConstraint: NSLayoutConstraint!
     @IBOutlet weak var sectionLabel: UILabel!
     @IBOutlet weak var addButton: UIButton!
+    
+    var canViewContents = false
+    var section: Int = -1
     
     override func awakeFromNib() {
         

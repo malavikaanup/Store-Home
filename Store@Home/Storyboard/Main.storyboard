@@ -1349,8 +1349,8 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="suz-6O-mtt">
                                                     <rect key="frame" x="30" y="10" width="325" height="25"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -1361,6 +1361,9 @@
                                                 <constraint firstAttribute="trailing" secondItem="suz-6O-mtt" secondAttribute="trailing" constant="20" id="q4x-0r-8Qy"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="suz-6O-mtt" id="fpS-f3-kMU"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -1381,6 +1384,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZJw-CB-NqM"/>
                     </view>
+                    <connections>
+                        <outlet property="submenuTableView" destination="IlV-FZ-JRS" id="Wxf-Ak-JGr"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yCD-GE-nob" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
