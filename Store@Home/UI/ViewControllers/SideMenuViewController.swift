@@ -8,6 +8,14 @@
 
 import UIKit
 
+@objc protocol ShowupViewControllersDelegate {
+    @objc optional func moveToProfileView()
+}
+
+@objc protocol ShowupTabViewControllersDelegate {
+    @objc optional func moveToSelectedTab(index: Int)
+}
+
 class SideMenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var menuTableView: UITableView!
     @IBOutlet weak var guestMenuTableView: UITableView!
@@ -26,6 +34,8 @@ class SideMenuViewController: UIViewController, UITableViewDataSource, UITableVi
     
     var loggedIn = false
     var accountContents = [String]()
+    var vcDelegate: ShowupViewControllersDelegate?
+    var tabVCDelagte: ShowupTabViewControllersDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,8 +77,6 @@ class SideMenuViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     @objc func revealSectionContents(_ sender: Any) {
-        
-        var section = -1
         var addButton = UIButton()
         if sender is UIButton {
             addButton = sender as! UIButton
@@ -215,14 +223,34 @@ class SideMenuViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let selectedCell = tableView.cellForRow(at: indexPath) as! SideMenuTableViewCell
+        
         if indexPath.section == 1 {
-           if indexPath.row == 7 {
+            switch indexPath.row {
+            case 4:
+//                performSegue(withIdentifier: "swSegueToHome", sender: selectedCell)
+                vcDelegate?.moveToProfileView!()
+            case 7:
                 self.loggedIn = false
                 self.changeUIOnLogin()
+            default:
+                return
             }
         } else {
-            if indexPath.row == 2 {
-                performSegue(withIdentifier: "pushSeguetoSubmenu", sender: self)
+            if indexPath.section == 0 && indexPath.row == 0 {
+//                self.performSegue(withIdentifier: "swSegueToHome", sender: selectedCell)
+                tabVCDelagte?.moveToSelectedTab!(index: indexPath.row)
+            } else {
+                switch indexPath.row {
+                case 2:
+                    performSegue(withIdentifier: "pushSeguetoSubmenu", sender: selectedCell)
+                case 3:
+//                    performSegue(withIdentifier: "swSegueToOffers", sender: self)
+                    tabVCDelagte?.moveToSelectedTab!(index: indexPath.row)
+                default:
+                    return
+                }
             }
         }
     }
@@ -254,15 +282,31 @@ class SideMenuViewController: UIViewController, UITableViewDataSource, UITableVi
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return UIStatusBarStyle.lightContent
     }
-    
-    
     /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+//        let cell              = sender as! SideMenuTableViewCell
+//        let tableView         = loggedIn ? menuTableView : guestMenuTableView
+//        let selectedIndexPath = tableView?.indexPath(for: cell)
+//        switch segue.identifier! {
+//        case "swSegueToHome":
+//            if selectedIndexPath?.section == 1 {
+//                if selectedIndexPath?.row == 4 {
+//
+//                }
+//            } else if selectedIndexPath?.section == 0 && selectedIndexPath?.row == 0 {
+//
+//            } else {
+//
+//            }
+//        case "swSegueToOffers":
+//            tabVCDelagte?.moveToSelectedTab!(index: (selectedIndexPath?.row)!)
+//
+//        default:
+//            return
+//        }
     }
     */
 

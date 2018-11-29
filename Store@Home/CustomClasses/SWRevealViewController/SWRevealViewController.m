@@ -179,11 +179,15 @@ static CGFloat scaledValue( CGFloat v1, CGFloat min2, CGFloat max2, CGFloat min1
     [_c _getRevealWidth:&revealWidth revealOverDraw:&revealOverdraw forSymetry:symetry];
     [_c _getAdjustedFrontViewPosition:&frontViewPosition forSymetry:symetry];
     
-    if ( frontViewPosition == FrontViewPositionRight )
+    //change made
+    if ( frontViewPosition >= FrontViewPositionRight )
         location = revealWidth;
     
-    else if ( frontViewPosition > FrontViewPositionRight )
-        location = revealWidth + revealOverdraw;
+//    if ( frontViewPosition == FrontViewPositionRight )
+//        location = revealWidth;
+//
+//    else if ( frontViewPosition > FrontViewPositionRight )
+//        location = revealWidth + revealOverdraw;
 
     return location*symetry;
 }
@@ -665,8 +669,8 @@ const int FrontViewPositionNone = 0xff;
     _toggleAnimationType = SWRevealToggleAnimationTypeSpring;
     _springDampingRatio = 1;
     _replaceViewAnimationDuration = 0.25;
-    _frontViewShadowRadius = 2.5f;
-    _frontViewShadowOffset = CGSizeMake(0.0f, 2.5f);
+    _frontViewShadowRadius = 6.5f; //change made 2.5 to 6.5
+    _frontViewShadowOffset = CGSizeMake(0.0f, 6.5f); //change made 2.5 to 6.5
     _frontViewShadowOpacity = 1.0f;
     _frontViewShadowColor = [UIColor blackColor];
     _userInteractionStore = YES;

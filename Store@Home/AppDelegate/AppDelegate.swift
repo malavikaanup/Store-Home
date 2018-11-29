@@ -15,7 +15,7 @@ import GoogleSignIn
 class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
     var window: UIWindow?
 
-    var dict: [String: String]!
+    var userDict: [String: String]!
         
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
@@ -24,7 +24,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
         
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         
-
+        let barButtonItemAppearance = UIBarButtonItem.appearance()
+        barButtonItemAppearance.setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.clear], for: .normal)
+        barButtonItemAppearance.setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.clear], for: .highlighted)
+        let backImg: UIImage = UIImage(imageLiteralResourceName: "back_button")
+        barButtonItemAppearance.setBackButtonBackgroundImage(backImg, for: .normal, barMetrics: .default)
+        
+        let image = UIImage()
+        
+        UINavigationBar.appearance().backIndicatorImage = image
+        UINavigationBar.appearance().backIndicatorTransitionMaskImage = image
         
         // Override point for customization after application launch.
         return true
@@ -75,9 +84,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate {
             let familyName = user.profile.familyName
             let givenName = user.profile.givenName
             let fullName = user.profile.name
-            dict = ["userID":userId, "token": idToken, "email": email, "familyName": familyName, "givenName": givenName, "fullName": fullName] as! [String : String]
+            var url = ""
+            if user.profile.hasImage {
+                url = user.profile.imageURL(withDimension: 80).absoluteString
+            }
+            userDict = ["userID":userId, "token": idToken, "email": email, "familyName": familyName, "givenName": givenName, "fullName": fullName, "imageURL": url] as! [String : String]
             
-            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "GoogleSignIn"), object: nil, userInfo: ["signInUser": dict])
+            NotificationCenter.default.post(name: NSNotification.Name(rawValue: "GoogleSignIn"), object: nil, userInfo:nil)
             
         }
     }

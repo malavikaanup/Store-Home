@@ -8,12 +8,29 @@
 
 import UIKit
 
-class MainTabbarViewController: UITabBarController {
-
+class MainTabbarViewController: UITabBarController, ShowupTabViewControllersDelegate {    
+    
+    var menuVC: SideMenuViewController = SideMenuViewController()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        menuVC = (self.revealViewController().rearViewController! as! UINavigationController).topViewController as! SideMenuViewController
+        menuVC.tabVCDelagte = self
+        
         // Do any additional setup after loading the view.
+    }
+    
+    func moveToSelectedTab(index: Int) {
+        switch index {
+        case 0:
+            self.selectedIndex = 0
+        case 3:
+            self.selectedIndex = 3
+        default:
+            self.selectedIndex = 0
+        }
+        let revealVC = revealViewController() as SWRevealViewController
+        revealVC.revealToggle(self)
     }
 
     override func didReceiveMemoryWarning() {

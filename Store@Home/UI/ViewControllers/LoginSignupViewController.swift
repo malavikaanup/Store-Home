@@ -46,7 +46,7 @@ class LoginSignupViewController: UIViewController, GIDSignInUIDelegate {
     }
     
     @objc func onSuccessSignIn(_ notification: Notification) -> Void {
-        print(notification.userInfo as Any)
+        print(appdelegate.userDict)
         self.dismiss(animated: true, completion: nil)
     }
     
